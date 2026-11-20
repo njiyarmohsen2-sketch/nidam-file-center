@@ -1,81 +1,149 @@
-<!doctype html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Pergeha Nidam educational file library. Browse and download public files.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#071e2f">
+<meta name="description" content="Pergeha Nidam public library of downloadable reports, educational materials, and applications.">
 <title>Nidam File Center | پەرگەها نیدەم</title>
 <style>
-:root{--bg:#071e2f;--gold:#ffd978;--soft:#acc4cb;--white:#f7fbfd;--line:rgba(255,255,255,.16)}
+:root{--deep:#081e2d;--deep2:#10394b;--gold:#ffda83;--text:#f6fafb;--muted:#adc6ce;--border:rgba(255,255,255,.16)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font:15px/1.7 system-ui,-apple-system,Arial,Tahoma,sans-serif;color:var(--white);background:radial-gradient(ellipse at 90% 10%,#1b4a56 0,transparent 45%),linear-gradient(145deg,#081b29,#10394b);min-height:100vh}
-a{color:inherit;text-decoration:none}button{cursor:pointer;font:inherit}
-a:focus-visible,button:focus-visible{outline:3px solid #ffd978;outline-offset:3px}
-.wrap{width:min(1110px,calc(100% - 38px));margin:auto}
-header{border-bottom:1px solid var(--line)}
-nav{display:flex;align-items:center;justify-content:space-between;min-height:85px;gap:20px}
-.brand{display:flex;gap:13px;align-items:center;font-weight:850;letter-spacing:.9px;font-size:21px}
-.mark{background:var(--gold);color:#142f3a;border-radius:11px;width:43px;height:43px;display:grid;place-items:center;font-weight:900;font-size:23px}
-.brand small{display:block;font-size:10px;letter-spacing:2px;color:var(--soft);line-height:1.2}
-.lang{border:1px solid var(--line);background:#164051;color:#fff;padding:8px 17px;border-radius:22px}
-.hero{padding:85px 0 78px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px}
-.eyebrow{color:var(--gold);font-weight:800;letter-spacing:2px;font-size:11px}
-h1{font-size:clamp(43px,6vw,74px);line-height:1.11;letter-spacing:-2.7px;margin:23px 0}
+body{margin:0;background:radial-gradient(ellipse at 83% 7%,#1b4b5c 0,transparent 42%),linear-gradient(140deg,#071b29,#103747);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.shell{width:min(1150px,calc(100% - 44px));margin:auto}
+header{border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0}
+.brand{display:flex;align-items:center;gap:12px;color:var(--text);font-size:23px;font-weight:850;letter-spacing:1.5px}
+.logo{display:grid;place-items:center;height:47px;width:47px;border-radius:13px;background:var(--gold);color:var(--deep);font-weight:900;font-size:24px}
+.brand small{display:block;font-size:10px;letter-spacing:2.2px;color:var(--muted);line-height:1}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-link{font-size:13px;color:#d5e8ec;font-weight:650}
+.lang{background:rgba(255,255,255,.07);color:#fff;border:1px solid var(--border);padding:8px 17px;border-radius:999px}
+.hero{padding:75px 0 58px;display:grid;grid-template-columns:1fr .85fr;align-items:center;gap:55px}
+.eyebrow{font-size:11px;letter-spacing:2px;font-weight:850;color:var(--gold)}
+h1{font-size:clamp(42px,6.5vw,74px);line-height:1.1;margin:22px 0;letter-spacing:-2.9px}
 h1 em{font-style:normal;color:var(--gold)}
-.lead{color:var(--soft);font-size:17px;max-width:565px}
-.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
-.btn{border:1px solid transparent;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 20px;min-height:53px;font-size:14px;font-weight:800}
-.primary{background:var(--gold);color:#0b2535}
-.secondary{border-color:#fff6;background:#ffffff0a;color:var(--white)}
-.note{max-width:550px;color:#b0c5ca;font-size:12px;margin-top:19px}
-.preview{padding:25px;border-radius:19px;background:linear-gradient(145deg,#204e5d,#0d2f40);box-shadow:0 25px 65px #0005;border:1px solid #ffffff33;transform:rotate(1deg)}
-.preview h2{font-size:22px;margin:0 0 22px}
-.file{padding:15px;margin:11px 0;display:flex;align-items:center;gap:14px;border:1px solid #ffffff16;border-radius:11px;background:#0725349c}
-.fileicon{width:46px;height:47px;flex-shrink:0;display:grid;place-items:center;border-radius:9px;background:#71404c;font-size:11px;font-weight:900;color:#ffe1e1}
-.file:nth-of-type(2) .fileicon{background:#36587a;color:#d5e5ff}
-.file:nth-of-type(3) .fileicon{background:#376653;color:#d3f7e3}
-.fileinfo{flex:1;min-width:0}.fileinfo strong{display:block;font-size:13px}.fileinfo span{display:block;color:var(--soft);font-size:11px}
-.downloadicon{color:var(--gold);font-size:19px}
-.section-title{font-size:11px;color:var(--gold);letter-spacing:2px;font-weight:800;margin-bottom:19px}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:90px}
-.step{border:1px solid var(--line);background:#ffffff08;padding:26px;border-radius:12px}
-.stepnum{color:var(--gold);font-size:20px;font-weight:900}
-.step h3{margin:20px 0 9px;font-size:18px}.step p{color:var(--soft);font-size:13px;margin:0}
-.cta{border-radius:15px;background:var(--gold);color:#092333;padding:35px;display:flex;justify-content:space-between;gap:25px;align-items:center;margin-bottom:80px}
-.cta h2{font-size:27px;line-height:1.22;margin:0 0 8px}.cta p{margin:0;font-size:14px;max-width:530px}
-.cta .btn{background:#092d3f;color:#fff;white-space:nowrap}
-footer{border-top:1px solid var(--line);padding:28px 0 36px;font-size:12px;color:var(--soft);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.lead{font-size:17px;line-height:1.85;max-width:620px;color:var(--muted);margin:0 0 27px}
+.primary-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:var(--deep);font-weight:800;font-size:14px;min-height:52px;padding:13px 23px;border-radius:10px}
+.dots{font-size:12px;color:var(--muted);margin-top:24px;display:flex;align-items:center;gap:9px}
+.dots:before{content:"";height:7px;width:7px;border-radius:50%;background:var(--gold)}
+.panel{border-radius:20px;padding:26px;background:linear-gradient(144deg,#255161,#0d2e40);border:1px solid #ffffff43;box-shadow:0 30px 85px #0005;transform:rotate(1deg)}
+.panel-header{font-size:24px;font-weight:800;display:flex;justify-content:space-between;padding-bottom:18px}
+.panel-header span{color:var(--gold)}
+.fake{display:flex;gap:14px;align-items:center;margin:11px 0;background:#061e2d94;border:1px solid #ffffff14;border-radius:11px;padding:12px}
+.fake-type{width:51px;height:50px;border-radius:9px;background:#744650;display:grid;place-items:center;font-size:11px;font-weight:850;color:#ffe3e4;flex-shrink:0}
+.fake:nth-of-type(3) .fake-type{background:#315779;color:#dce9ff}
+.fake:nth-of-type(4) .fake-type{background:#326b53;color:#d2f4e0}
+.fake strong{font-size:13px;display:block}.fake small{display:block;font-size:11px;color:var(--muted);margin-top:5px}.fake-arrow{margin-inline-start:auto;color:var(--gold);font-size:20px}
+.downloads{padding:28px 0 100px}
+.title-row{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px}
+.kicker{color:var(--gold);font-size:11px;letter-spacing:2px;font-weight:850}
+h2{font-size:32px;letter-spacing:-.6px;margin:6px 0}
+.title-row p{font-size:14px;color:var(--muted);margin:7px 0}
+.count{font-size:12px;background:rgba(255,255,255,.08);padding:9px 13px;border:1px solid var(--border);border-radius:25px;white-space:nowrap}
+.toolbar{display:flex;gap:12px;margin-bottom:21px}
+.search-wrap{position:relative;flex:1}
+.search-wrap span{position:absolute;left:17px;top:50%;transform:translateY(-50%);color:var(--muted)}
+input{width:100%;background:#0c2c3d;border:1px solid #385563;border-radius:10px;color:#fff;min-height:52px;padding:13px 15px 13px 44px;outline:none}
+input::placeholder{color:#95adb8}
+.file-list{display:grid;gap:12px}
+.file-card{display:flex;gap:15px;align-items:center;padding:18px 20px;border:1px solid var(--border);background:rgba(255,255,255,.045);border-radius:12px;min-width:0}
+.icon-file{height:54px;width:57px;flex-shrink:0;display:grid;place-items:center;background:#2a5265;border-radius:10px;font-size:11px;font-weight:900;letter-spacing:.3px;color:#eaf5f9}
+.icon-file[data-type="PDF"]{background:#78414d}.icon-file[data-type="APK"]{background:#326551}.icon-file[data-type="ZIP"]{background:#615179}
+.details{flex:1;min-width:0}.file-name{font-weight:750;font-size:15px;overflow-wrap:anywhere}.file-meta{color:var(--muted);font-size:12px;margin-top:6px}
+.download-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:#082436;border-radius:8px;font-size:13px;font-weight:800;padding:11px 16px;white-space:nowrap}
+.placeholder{border:1px dashed #4d6976;border-radius:14px;padding:55px 30px;text-align:center;color:var(--muted);background:#ffffff04}
+.placeholder strong{display:block;color:var(--text);font-size:19px;margin-bottom:10px}
+.placeholder a{text-decoration:underline;color:var(--gold)}
+.public-note{margin:20px 0;color:var(--muted);font-size:12px}
+.footer{border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--muted);font-size:12px;padding:28px 0 37px}
 html[dir=rtl] h1{letter-spacing:0}
-@media(max-width:840px){.hero{grid-template-columns:1fr;gap:36px;padding:55px 0}.preview{max-width:580px}.steps{grid-template-columns:1fr}.cta{flex-direction:column;align-items:flex-start}}
-@media(max-width:530px){nav{min-height:76px}.brand{font-size:18px}.mark{width:39px;height:39px}.hero{padding:52px 0 58px}h1{font-size:47px}.lead{font-size:15px}.actions{flex-direction:column}.btn{width:100%}.preview{padding:18px}.cta{padding:25px}.step{padding:22px}}
+html[dir=rtl] .search-wrap span{left:auto;right:17px}
+html[dir=rtl] input{padding-left:15px;padding-right:44px}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding:56px 0}.panel{max-width:560px}.downloads{padding-top:12px}}
+@media(max-width:580px){.shell{width:calc(100% - 30px)}.nav{padding:15px 0}.brand{font-size:18px}.logo{height:41px;width:41px}.nav-link{display:none}.hero{gap:30px;padding:47px 0 42px}h1{font-size:47px;letter-spacing:-2px}.lead{font-size:15px}.panel{padding:18px}.downloads{padding-bottom:70px}.title-row{align-items:start}.title-row h2{font-size:27px}.count{font-size:11px}.file-card{gap:11px;padding:13px 12px;flex-wrap:wrap}.icon-file{height:45px;width:45px}.download-btn{width:100%;margin-top:3px}.file-name{font-size:13px}.file-meta{font-size:11px}.placeholder{padding:35px 20px}}
 </style>
 </head>
 <body>
-<header><nav class="wrap"><a href="./" class="brand"><span class="mark">N</span><span>NIDAM<small>FILE CENTER</small></span></a><button id="lang" class="lang" type="button">کوردی</button></nav></header>
-<main class="wrap">
+<header><nav class="shell nav"><a class="brand" href="./" aria-label="Nidam File Center"><span class="logo">N</span><span>NIDAM <small>FILE CENTER</small></span></a><div class="nav-right"><a class="nav-link" href="#downloads" data-en="Browse files" data-ku="دیتنا فایلان">Browse files</a><button type="button" class="lang" id="language">کوردی</button></div></nav></header>
+<main class="shell">
 <section class="hero">
-<div><div class="eyebrow" data-en="PERGEHA NIDAM · DIGITAL LIBRARY" data-ku="پەرگەها نیدەم · پەرتووکخانا دیجیتاڵ">PERGEHA NIDAM · DIGITAL LIBRARY</div>
-<h1><span data-en="Your files." data-ku="فایلێن تە.">Your files.</span><br><em data-en="Ready to share." data-ku="ئامادەن بو پشکداریکرنێ.">Ready to share.</em></h1>
-<p class="lead" data-en="A modern home for educational reports, lessons, documents and applications. Browse our shared library and download the files you need." data-ku="جهەکێ مۆدێرن بو راپورت، وانە، بەڵگەنامە و بەرنامەیێن فێرکرنێ. پەرتووکخانا مە ڤەکە و فایلێن پێدڤی داگرە.">A modern home for educational reports, lessons, documents and applications. Browse our shared library and download the files you need.</p>
-<div class="actions"><a class="btn primary" href="https://drive.google.com/drive/folders/1cAcgZ3yFZxp3WPgf5-3k3KN_b-gjbZ5K" target="_blank" rel="noopener noreferrer"><span data-en="↓ Browse & download files" data-ku="↓ دیتن و داگرتنا فایلان">↓ Browse & download files</span></a><a class="btn secondary" href="https://drive.google.com/drive/folders/1cAcgZ3yFZxp3WPgf5-3k3KN_b-gjbZ5K" target="_blank" rel="noopener noreferrer"><span data-en="↗ Admin upload (Google Drive)" data-ku="↗ بارکرنا فایلان (ئەدمین)">↗ Admin upload (Google Drive)</span></a></div>
-<p class="note" data-en="Admin uploads use your Google Drive account. Visitors can download files after the folder is shared as Anyone with the link → Viewer." data-ku="بارکرنا ئەدمینی ب ئەکاونتێ Google Drive یێ تەیە. میڤان دکارن فایلان داگرن پشتی فولدەر ب شێوەی گشتی هاتە هەڤپشککرن.">Admin uploads use your Google Drive account. Visitors can download files after the folder is shared as Anyone with the link → Viewer.</p>
+<div>
+<div class="eyebrow" data-en="PERGEHA NIDAM · DIGITAL FILE LIBRARY" data-ku="پەرگەها نیدەم · پەرتووکخانا فایلێن دیجیتاڵ">PERGEHA NIDAM · DIGITAL FILE LIBRARY</div>
+<h1><span data-en="Discover files." data-ku="فایلان بدۆزە.">Discover files.</span><br><em data-en="Download easily." data-ku="ب ئاسانی داگرە.">Download easily.</em></h1>
+<p class="lead" data-en="Explore educational reports, worksheets, documents, and applications. All published files are available to download right here." data-ku="راپورتێن فێرکرنێ، پەڕێن کارێ، بەڵگەنامە و بەرنامەیان ببینە. هەمی فایلێن بەلاڤکری ل ڤێرێ دکارن بهێنە داگرتن.">Explore educational reports, worksheets, documents, and applications. All published files are available to download right here.</p>
+<a href="#downloads" class="primary-button"><span data-en="↓ Browse downloads" data-ku="↓ دیتنا فایلێن داگرتنێ">↓ Browse downloads</span></a>
+<div class="dots" data-en="Public download library · No sign-in needed" data-ku="پەرتووکخانا گشتی یا داگرتنێ · بێ چوونا ژوور">Public download library · No sign-in needed</div>
 </div>
-<div class="preview"><h2>File library <span style="float:right;color:var(--gold)">↗</span></h2>
-<div class="file"><span class="fileicon">PDF</span><span class="fileinfo"><strong>Reports & documents</strong><span>Educational resources</span></span><span class="downloadicon">↓</span></div>
-<div class="file"><span class="fileicon">DOC</span><span class="fileinfo"><strong>Worksheets & lessons</strong><span>Teaching materials</span></span><span class="downloadicon">↓</span></div>
-<div class="file"><span class="fileicon">APK</span><span class="fileinfo"><strong>Apps & downloads</strong><span>Software & utilities</span></span><span class="downloadicon">↓</span></div></div>
+<div class="panel" aria-hidden="true"><div class="panel-header">File library <span>↗</span></div>
+<div class="fake"><span class="fake-type">PDF</span><span><strong>Reports & documents</strong><small>Educational resources</small></span><span class="fake-arrow">↓</span></div>
+<div class="fake"><span class="fake-type">DOC</span><span><strong>Worksheets & lessons</strong><small>Teaching materials</small></span><span class="fake-arrow">↓</span></div>
+<div class="fake"><span class="fake-type">APK</span><span><strong>Apps & downloads</strong><small>Software & utilities</small></span><span class="fake-arrow">↓</span></div>
+</div>
 </section>
-<div class="section-title" data-en="HOW IT WORKS" data-ku="چاوانییا کارکرنێ">HOW IT WORKS</div>
-<section class="steps">
-<div class="step"><span class="stepnum">01</span><h3 data-en="Open the library" data-ku="پەرتووکخانێ ڤەکە">Open the library</h3><p data-en="Open the linked Google Drive folder to browse public files." data-ku="فولدەرا Google Drive ڤەکە بو دیتنا فایلێن گشتی.">Open the linked Google Drive folder to browse public files.</p></div>
-<div class="step"><span class="stepnum">02</span><h3 data-en="Choose a file" data-ku="فایلێ هەلبژێرە">Choose a file</h3><p data-en="Pick a PDF, Word file, Excel sheet, ZIP, APK or image." data-ku="فایلەکێ PDF، Word، Excel، ZIP، APK یان وێنەیەکێ هەلبژێرە.">Pick a PDF, Word file, Excel sheet, ZIP, APK or image.</p></div>
-<div class="step"><span class="stepnum">03</span><h3 data-en="Download or share" data-ku="داگرە یان پشکدار بکە">Download or share</h3><p data-en="Download files or copy their individual share links in Drive." data-ku="فایلان داگرە یان لینکا هەر فایلەکێ ژ Drive کۆپی بکە.">Download files or copy their individual share links in Drive.</p></div>
+<section class="downloads" id="downloads">
+<div class="title-row"><div><div class="kicker" data-en="OUR DOWNLOAD LIBRARY" data-ku="پەرتووکخانا مە یا داگرتنێ">OUR DOWNLOAD LIBRARY</div><h2 data-en="Available downloads" data-ku="فایلێن بەردەست">Available downloads</h2><p data-en="Choose a file below to download it." data-ku="فایلەکێ ژ خوارێ هەلبژێرە بو داگرتنێ.">Choose a file below to download it.</p></div><div class="count" id="file-count" aria-live="polite">…</div></div>
+<div class="toolbar"><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search files…" aria-label="Search files"></label></div>
+<div id="file-list" class="file-list" aria-live="polite"><div class="placeholder"><strong>Loading files…</strong>Please check back in a moment.</div></div>
+<p class="public-note" data-en="Downloads are hosted as published files on GitHub Releases. The file list updates when new releases are published." data-ku="فایلێن داگرتنێ ل GitHub Releases دهێنە هەڵگرتن. لیستا فایلان پشتی بەلاڤکرنا فایلێن نوی دهێتە نویکرن.">Downloads are hosted as published files on GitHub Releases. The file list updates when new releases are published.</p>
 </section>
-<section class="cta"><div><h2 data-en="Your files. One link." data-ku="فایلێن تە. ئێک لینک.">Your files. One link.</h2><p data-en="Access your shared folder from any modern browser." data-ku="ژ هەر براوزەرەکێ نوی دەستگەهشتن ب فولدەرا خۆ بکە.">Access your shared folder from any modern browser.</p></div><a class="btn" href="https://drive.google.com/drive/folders/1cAcgZ3yFZxp3WPgf5-3k3KN_b-gjbZ5K" target="_blank" rel="noopener noreferrer" data-en="Open file folder ↗" data-ku="ڤەکرنا فولدەرێ ↗">Open file folder ↗</a></section>
 </main>
-<footer class="wrap"><span>© <span id="year">2026</span> Pergeha Nidam — پەرگەها نیدەم</span><span>GitHub Pages + Google Drive</span></footer>
+<footer class="shell footer"><span>© <span id="year"></span> Pergeha Nidam — پەرگەها نیدەم</span><span>Secure public downloads via GitHub Releases</span></footer>
 <script>
+(function(){
+"use strict";
+var api="https://api.github.com/repos/njiyarmohsen2-sketch/nidam-file-center/releases?per_page=100";
+var all=[];
+var language="en";
+var translations={
+en:{loading:"Loading files…",loadingText:"Retrieving published downloads.",empty:"No downloads published yet",emptyText:"Files will appear here when new downloads are published.",noResults:"No matching files",noResultsText:"Try a different filename or file type.",error:"Files are temporarily unavailable",errorText:"Please try again or view the downloads directly on GitHub.",viewReleases:"See downloads on GitHub",download:"↓ Download",files:"files",search:"Search files…"},
+ku:{loading:"فایل دهێنە بارکرن…",loadingText:"داگرتنێن بەلاڤکری دهێنە وەرگرتن.",empty:"هێشتا هیچ فایلەک نەهاتیە بەلاڤکرن",emptyText:"پشتی بەلاڤکرنا فایلان ل ڤێرێ دیار دبن.",noResults:"هیچ فایلەک نەهاتە دیتن",noResultsText:"ناڤێ فایلەکێ دی بگەڕێ.",error:"فایل نوکە بەردەست نینن",errorText:"دوبارە هەولبدە یان سەرەدانا GitHub بکە.",viewReleases:"دیتنا فایلان ل GitHub",download:"↓ داگرتن",files:"فایل",search:"ل فایلان بگەڕێ…"}
+};
+var list=document.getElementById("file-list"),count=document.getElementById("file-count"),search=document.getElementById("search");
+function t(k){return translations[language][k]}
+function blank(title,body,link){list.replaceChildren();var box=document.createElement("div");box.className="placeholder";var strong=document.createElement("strong");strong.textContent=title;var p=document.createElement("p");p.textContent=body;box.append(strong,p);if(link){var a=document.createElement("a");a.href="https://github.com/njiyarmohsen2-sketch/nidam-file-center/releases";a.target="_blank";a.rel="noopener noreferrer";a.textContent=t("viewReleases");box.append(a)}list.append(box)}
+function size(bytes){if(!Number.isFinite(bytes))return "";if(bytes<1024)return bytes+" B";if(bytes<1048576)return (bytes/1024).toFixed(1)+" KB";return (bytes/1048576).toFixed(1)+" MB"}
+function ext(name){var bits=name.split(".");return bits.length>1?bits.pop().slice(0,5).toUpperCase():"FILE"}
+function safeAsset(a){return a && a.state==="uploaded" && typeof a.browser_download_url==="string" && a.browser_download_url.startsWith("https://github.com/njiyarmohsen2-sketch/nidam-file-center/releases/download/")}
+function render(){
+var needle=search.value.toLocaleLowerCase().trim();
+var items=all.filter(function(a){return a.name.toLocaleLowerCase().includes(needle)});
+count.textContent=items.length+" "+t("files");
+if(!items.length){blank(all.length?t("noResults"):t("empty"),all.length?t("noResultsText"):t("emptyText"),false);return}
+list.replaceChildren();
+items.forEach(function(asset){
+var row=document.createElement("article");row.className="file-card";
+var ico=document.createElement("div");ico.className="icon-file";ico.dataset.type=ext(asset.name);ico.textContent=ext(asset.name);
+var details=document.createElement("div");details.className="details";
+var title=document.createElement("div");title.className="file-name";title.textContent=asset.name;
+var meta=document.createElement("div");meta.className="file-meta";meta.textContent=size(asset.size)+" · "+new Date(asset.created_at).toLocaleDateString(language==="ku"?"en-GB":"en-US");
+details.append(title,meta);
+var download=document.createElement("a");download.className="download-btn";download.textContent=t("download");download.href=asset.browser_download_url;download.setAttribute("download",asset.name);download.rel="noopener noreferrer";
+row.append(ico,details,download);list.append(row);
+});
+}
+async function fetchFiles(){
+blank(t("loading"),t("loadingText"),false);
+try{
+var response=await fetch(api,{headers:{Accept:"application/vnd.github+json"}});
+if(!response.ok)throw new Error("GitHub API: "+response.status);
+var releases=await response.json();
+if(!Array.isArray(releases))throw new Error("Unexpected data");
+all=releases.filter(function(r){return !r.draft}).flatMap(function(r){return (r.assets||[]).filter(safeAsset)}).sort(function(a,b){return new Date(b.created_at)-new Date(a.created_at)});
+render();
+}catch(e){count.textContent="—";blank(t("error"),t("errorText"),true)}
+}
 document.getElementById("year").textContent=new Date().getFullYear();
-let current="en";document.getElementById("lang").addEventListener("click",function(){current=current==="en"?"ku":"en";document.documentElement.lang=current;document.documentElement.dir=current==="ku"?"rtl":"ltr";this.textContent=current==="en"?"کوردی":"English";document.querySelectorAll("[data-en][data-ku]").forEach(el=>{el.textContent=el.getAttribute("data-"+current)})});
+document.getElementById("language").addEventListener("click",function(){
+language=language==="en"?"ku":"en";
+document.documentElement.lang=language;document.documentElement.dir=language==="ku"?"rtl":"ltr";this.textContent=language==="en"?"کوردی":"English";
+document.querySelectorAll("[data-en][data-ku]").forEach(function(el){el.textContent=el.getAttribute("data-"+language)});
+search.placeholder=t("search");render();
+});
+search.addEventListener("input",render);
+fetchFiles();
+})();
 </script>
-</body></html>
+</body>
+</html>
