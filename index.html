@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Pergeha Nidam educational file library. Browse and download public files.">
+<meta name="theme-color" content="#071e2f">
+<title>Nidam File Center | پەرگەها نیدەم</title>
+<style>
+:root{--bg:#071e2f;--gold:#ffd978;--soft:#acc4cb;--white:#f7fbfd;--line:rgba(255,255,255,.16)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:15px/1.7 system-ui,-apple-system,Arial,Tahoma,sans-serif;color:var(--white);background:radial-gradient(ellipse at 90% 10%,#1b4a56 0,transparent 45%),linear-gradient(145deg,#081b29,#10394b);min-height:100vh}
+a{color:inherit;text-decoration:none}button{cursor:pointer;font:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid #ffd978;outline-offset:3px}
+.wrap{width:min(1110px,calc(100% - 38px));margin:auto}
+header{border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;min-height:85px;gap:20px}
+.brand{display:flex;gap:13px;align-items:center;font-weight:850;letter-spacing:.9px;font-size:21px}
+.mark{background:var(--gold);color:#142f3a;border-radius:11px;width:43px;height:43px;display:grid;place-items:center;font-weight:900;font-size:23px}
+.brand small{display:block;font-size:10px;letter-spacing:2px;color:var(--soft);line-height:1.2}
+.lang{border:1px solid var(--line);background:#164051;color:#fff;padding:8px 17px;border-radius:22px}
+.hero{padding:85px 0 78px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px}
+.eyebrow{color:var(--gold);font-weight:800;letter-spacing:2px;font-size:11px}
+h1{font-size:clamp(43px,6vw,74px);line-height:1.11;letter-spacing:-2.7px;margin:23px 0}
+h1 em{font-style:normal;color:var(--gold)}
+.lead{color:var(--soft);font-size:17px;max-width:565px}
+.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:32px}
+.btn{border:1px solid transparent;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 20px;min-height:53px;font-size:14px;font-weight:800}
+.primary{background:var(--gold);color:#0b2535}
+.secondary{border-color:#fff6;background:#ffffff0a;color:var(--white)}
+.note{max-width:550px;color:#b0c5ca;font-size:12px;margin-top:19px}
+.preview{padding:25px;border-radius:19px;background:linear-gradient(145deg,#204e5d,#0d2f40);box-shadow:0 25px 65px #0005;border:1px solid #ffffff33;transform:rotate(1deg)}
+.preview h2{font-size:22px;margin:0 0 22px}
+.file{padding:15px;margin:11px 0;display:flex;align-items:center;gap:14px;border:1px solid #ffffff16;border-radius:11px;background:#0725349c}
+.fileicon{width:46px;height:47px;flex-shrink:0;display:grid;place-items:center;border-radius:9px;background:#71404c;font-size:11px;font-weight:900;color:#ffe1e1}
+.file:nth-of-type(2) .fileicon{background:#36587a;color:#d5e5ff}
+.file:nth-of-type(3) .fileicon{background:#376653;color:#d3f7e3}
+.fileinfo{flex:1;min-width:0}.fileinfo strong{display:block;font-size:13px}.fileinfo span{display:block;color:var(--soft);font-size:11px}
+.downloadicon{color:var(--gold);font-size:19px}
+.section-title{font-size:11px;color:var(--gold);letter-spacing:2px;font-weight:800;margin-bottom:19px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:90px}
+.step{border:1px solid var(--line);background:#ffffff08;padding:26px;border-radius:12px}
+.stepnum{color:var(--gold);font-size:20px;font-weight:900}
+.step h3{margin:20px 0 9px;font-size:18px}.step p{color:var(--soft);font-size:13px;margin:0}
+.cta{border-radius:15px;background:var(--gold);color:#092333;padding:35px;display:flex;justify-content:space-between;gap:25px;align-items:center;margin-bottom:80px}
+.cta h2{font-size:27px;line-height:1.22;margin:0 0 8px}.cta p{margin:0;font-size:14px;max-width:530px}
+.cta .btn{background:#092d3f;color:#fff;white-space:nowrap}
+footer{border-top:1px solid var(--line);padding:28px 0 36px;font-size:12px;color:var(--soft);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+html[dir=rtl] h1{letter-spacing:0}
+@media(max-width:840px){.hero{grid-template-columns:1fr;gap:36px;padding:55px 0}.preview{max-width:580px}.steps{grid-template-columns:1fr}.cta{flex-direction:column;align-items:flex-start}}
+@media(max-width:530px){nav{min-height:76px}.brand{font-size:18px}.mark{width:39px;height:39px}.hero{padding:52px 0 58px}h1{font-size:47px}.lead{font-size:15px}.actions{flex-direction:column}.btn{width:100%}.preview{padding:18px}.cta{padding:25px}.step{padding:22px}}
+</style>
+</head>
+<body>
+<header><nav class="wrap"><a href="./" class="brand"><span class="mark">N</span><span>NIDAM<small>FILE CENTER</small></span></a><button id="lang" class="lang" type="button">کوردی</button></nav></header>
+<main class="wrap">
+<section class="hero">
+<div><div class="eyebrow" data-en="PERGEHA NIDAM · DIGITAL LIBRARY" data-ku="پەرگەها نیدەم · پەرتووکخانا دیجیتاڵ">PERGEHA NIDAM · DIGITAL LIBRARY</div>
+<h1><span data-en="Your files." data-ku="فایلێن تە.">Your files.</span><br><em data-en="Ready to share." data-ku="ئامادەن بو پشکداریکرنێ.">Ready to share.</em></h1>
+<p class="lead" data-en="A modern home for educational reports, lessons, documents and applications. Browse our shared library and download the files you need." data-ku="جهەکێ مۆدێرن بو راپورت، وانە، بەڵگەنامە و بەرنامەیێن فێرکرنێ. پەرتووکخانا مە ڤەکە و فایلێن پێدڤی داگرە.">A modern home for educational reports, lessons, documents and applications. Browse our shared library and download the files you need.</p>
+<div class="actions"><a class="btn primary" href="https://drive.google.com/drive/folders/1cAcgZ3yFZxp3WPgf5-3k3KN_b-gjbZ5K" target="_blank" rel="noopener noreferrer"><span data-en="↓ Browse & download files" data-ku="↓ دیتن و داگرتنا فایلان">↓ Browse & download files</span></a><a class="btn secondary" href="https://drive.google.com/drive/folders/1cAcgZ3yFZxp3WPgf5-3k3KN_b-gjbZ5K" target="_blank" rel="noopener noreferrer"><span data-en="↗ Admin upload (Google Drive)" data-ku="↗ بارکرنا فایلان (ئەدمین)">↗ Admin upload (Google Drive)</span></a></div>
+<p class="note" data-en="Admin uploads use your Google Drive account. Visitors can download files after the folder is shared as Anyone with the link → Viewer." data-ku="بارکرنا ئەدمینی ب ئەکاونتێ Google Drive یێ تەیە. میڤان دکارن فایلان داگرن پشتی فولدەر ب شێوەی گشتی هاتە هەڤپشککرن.">Admin uploads use your Google Drive account. Visitors can download files after the folder is shared as Anyone with the link → Viewer.</p>
+</div>
+<div class="preview"><h2>File library <span style="float:right;color:var(--gold)">↗</span></h2>
+<div class="file"><span class="fileicon">PDF</span><span class="fileinfo"><strong>Reports & documents</strong><span>Educational resources</span></span><span class="downloadicon">↓</span></div>
+<div class="file"><span class="fileicon">DOC</span><span class="fileinfo"><strong>Worksheets & lessons</strong><span>Teaching materials</span></span><span class="downloadicon">↓</span></div>
+<div class="file"><span class="fileicon">APK</span><span class="fileinfo"><strong>Apps & downloads</strong><span>Software & utilities</span></span><span class="downloadicon">↓</span></div></div>
+</section>
+<div class="section-title" data-en="HOW IT WORKS" data-ku="چاوانییا کارکرنێ">HOW IT WORKS</div>
+<section class="steps">
+<div class="step"><span class="stepnum">01</span><h3 data-en="Open the library" data-ku="پەرتووکخانێ ڤەکە">Open the library</h3><p data-en="Open the linked Google Drive folder to browse public files." data-ku="فولدەرا Google Drive ڤەکە بو دیتنا فایلێن گشتی.">Open the linked Google Drive folder to browse public files.</p></div>
+<div class="step"><span class="stepnum">02</span><h3 data-en="Choose a file" data-ku="فایلێ هەلبژێرە">Choose a file</h3><p data-en="Pick a PDF, Word file, Excel sheet, ZIP, APK or image." data-ku="فایلەکێ PDF، Word، Excel، ZIP، APK یان وێنەیەکێ هەلبژێرە.">Pick a PDF, Word file, Excel sheet, ZIP, APK or image.</p></div>
+<div class="step"><span class="stepnum">03</span><h3 data-en="Download or share" data-ku="داگرە یان پشکدار بکە">Download or share</h3><p data-en="Download files or copy their individual share links in Drive." data-ku="فایلان داگرە یان لینکا هەر فایلەکێ ژ Drive کۆپی بکە.">Download files or copy their individual share links in Drive.</p></div>
+</section>
+<section class="cta"><div><h2 data-en="Your files. One link." data-ku="فایلێن تە. ئێک لینک.">Your files. One link.</h2><p data-en="Access your shared folder from any modern browser." data-ku="ژ هەر براوزەرەکێ نوی دەستگەهشتن ب فولدەرا خۆ بکە.">Access your shared folder from any modern browser.</p></div><a class="btn" href="https://drive.google.com/drive/folders/1cAcgZ3yFZxp3WPgf5-3k3KN_b-gjbZ5K" target="_blank" rel="noopener noreferrer" data-en="Open file folder ↗" data-ku="ڤەکرنا فولدەرێ ↗">Open file folder ↗</a></section>
+</main>
+<footer class="wrap"><span>© <span id="year">2026</span> Pergeha Nidam — پەرگەها نیدەم</span><span>GitHub Pages + Google Drive</span></footer>
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+let current="en";document.getElementById("lang").addEventListener("click",function(){current=current==="en"?"ku":"en";document.documentElement.lang=current;document.documentElement.dir=current==="ku"?"rtl":"ltr";this.textContent=current==="en"?"کوردی":"English";document.querySelectorAll("[data-en][data-ku]").forEach(el=>{el.textContent=el.getAttribute("data-"+current)})});
+</script>
+</body></html>
